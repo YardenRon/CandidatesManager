@@ -1,50 +1,105 @@
-.candidate-details {
-    height: 215px;
-    width: 615px;
-    float: left;
-    padding-top: 20px;
-    margin-bottom: 30px;
-    margin-right: 30px;
-    background-color: #f4f4f4;
-    box-shadow: 2px 2px 5px grey;
-
-    .name-container {
-        height: 15%;
-        width: 100%;
-        margin-left: 30px;
-        margin-bottom: 15px;
-        font-size: 1.5em;
-    }
-
-    img {
+@media screen and (min-width: 615px) {
+    .candidate-details {
+        height: 215px;
+        width: 615px;
         float: left;
-        height: 140px;
-        width: 120px;
-        margin-left: 30px;
+        padding-top: 20px;
+        margin-bottom: 30px;
         margin-right: 30px;
-    }
+        background-color: #f4f4f4;
+        box-shadow: 2px 2px 5px grey;
 
-    .jobs-container {
-        display: inline-block;
-        height: 70%;
-        width: 70%;
+        .name-container {
+            height: 15%;
+            width: 100%;
+            margin-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
 
-        .job {
-            margin-bottom: 20px;
+        .image-container {
+            float: left;
+            margin-left: 30px;
+            margin-right: 30px;
 
-            .job-title {
-                .prefix {
-                    font-size: 1.2em;
-                }
-                .title {
-                    font-size: 1.2em;
-                    font-weight: bold;
-                }
+            img {
+                height: 140px;
+                width: 120px;
             }
         }
 
-        a {
-            display: block;
+        .jobs-container {
+            display: inline-block;
+            height: 70%;
+            width: 70%;
+
+            .job {
+                margin-bottom: 20px;
+
+                .job-title {
+                    font-size: 1.2em;
+
+                    .title {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .candidate-details {
+        height: 380px;
+        width: 400px;
+        margin-bottom: 30px;
+        background-color: #f4f4f4;
+        box-shadow: 2px 2px 5px grey;
+
+        .name-container {
+            position: relative;
+            top: 160px;
+            margin-left: 20px;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .image-container {
+            img {
+                height: 200px;
+                width: 400px;
+                margin-top: -27px;
+                object-fit: cover;
+                object-position: 100% 47%;
+            }
+        }
+
+
+        .jobs-container {
+            margin: 20px 0px 20px 20px;
+
+            .job {
+                margin-bottom: 20px;
+
+                .job-title {
+                    font-size: 2.9vw;
+                    .title {
+                        font-weight: bold;
+                    }
+                }
+                
+                .period {
+                    font-size: 2.5vw;
+                }
+            }
+
+            a {
+                display: block;
+            }
         }
     }
 }
