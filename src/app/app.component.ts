@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CandidateService } from './shared/services/candidate.service';
+import { CandidatesFormatter } from './shared/formatters/candidates-formatter';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,14 @@ import { CandidateService } from './shared/services/candidate.service';
 export class AppComponent {
   title = 'CandidatesManager';
 
-  candidatesDetails;
+  candidates;
 
   constructor(private candidateService: CandidateService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    const formatter = new CandidatesFormatter();
     this.candidateService.getCandidates().subscribe(candidates => {
-      this.candidatesDetails = candidates;
+      this.candidates = formatter.getCandidatesDetailsFromFile(candidates);
     });
   }
 }

@@ -20,7 +20,7 @@
 
 <router-outlet></router-outlet> -->
 <div class="candidates-details">
-  <div class="candidate" *ngFor="let candidate of candidatesDetails">
-    <app-candidate [candidateDetails]="candidate"></app-candidate>
+  <div class="candidate" *ngFor="let candidate of candidates">
+    <app-candidate [candidate]="candidate"></app-candidate>
   </div> 
 </div>

@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CandidateComponent implements OnInit {
 
-  @Input() candidateDetails;
+  @Input() candidate;
 
   ngOnInit() {
   }

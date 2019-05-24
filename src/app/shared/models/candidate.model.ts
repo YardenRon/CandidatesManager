@@ -1,5 +1,6 @@
+import { Job } from "./job.model";
+
 export class Candidate {
     name: string;
-
-    constructor() {}
+    jobs: Job[];
 }

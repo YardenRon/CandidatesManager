@@ -1,16 +1,16 @@
 <div class="candidate-details">
   <div class="name">
-    <span> Hello {{ candidateDetails.contact_info.name.formatted_name }} </span>
+    <span> {{ candidate.name }} </span>
   </div>
   <br>
-  <div class="jobs" *ngFor="let job of candidateDetails.experience">
+  <div class="jobs" *ngFor="let job of candidate.jobs">
     <span class="job-prefix"> Worked as: </span>
     <span class="job-title"> {{ job.title }} </span>
     <span class="job-suffix"> , </span>
     <span class="start-date-prefix"> From </span>
-    <span class="start-date"> {{ job.start_date }} </span>
+    <span class="start-date"> {{ job.startDate }} </span>
     <span class="end-date-prefix"> To </span>
-    <span class="end-date"> {{ job.end_date }} </span>
+    <span class="end-date"> {{ job.endDate }} </span>
   </div>
   <br>
 </div>
