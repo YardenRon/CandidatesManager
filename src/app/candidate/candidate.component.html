@@ -1,8 +1,9 @@
 <div class="candidate-details">
-  <div class="name">
-    <span> {{ candidate.name }} </span>
+  <div class="name-container">
+    <span class="name"> {{ candidate.name }} </span>
   </div>
   <br>
+  <img src="{{ imagePath }}">
   <div class="jobs" *ngFor="let job of candidate.jobs">
     <span class="job-prefix"> Worked as: </span>
     <span class="job-title"> {{ job.title }} </span>

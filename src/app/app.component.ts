@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CandidateService } from './shared/services/candidate.service';
 import { CandidatesFormatter } from './shared/formatters/candidates-formatter';
+import { Candidate } from './shared/models/candidate.model';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { CandidatesFormatter } from './shared/formatters/candidates-formatter';
 export class AppComponent {
   title = 'CandidatesManager';
 
-  candidates;
+  candidates: Candidate[];
 
   constructor(private candidateService: CandidateService) {}
 
