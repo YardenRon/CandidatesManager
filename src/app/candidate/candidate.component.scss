@@ -1,0 +1,50 @@
+.candidate-details {
+    height: 215px;
+    width: 615px;
+    float: left;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px grey;
+
+    .name-container {
+        height: 15%;
+        width: 100%;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+
+    img {
+        float: left;
+        height: 140px;
+        width: 120px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .jobs-container {
+        display: inline-block;
+        height: 70%;
+        width: 70%;
+
+        .job {
+            margin-bottom: 20px;
+
+            .job-title {
+                .prefix {
+                    font-size: 1.2em;
+                }
+                .title {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        a {
+            display: block;
+        }
+    }
+}

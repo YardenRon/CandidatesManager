@@ -2,16 +2,20 @@
   <div class="name-container">
     <span class="name"> {{ candidate.name }} </span>
   </div>
-  <br>
   <img src="{{ imagePath }}">
-  <div class="jobs" *ngFor="let job of candidate.jobs">
-    <span class="job-prefix"> Worked as: </span>
-    <span class="job-title"> {{ job.title }} </span>
-    <span class="job-suffix"> , </span>
-    <span class="start-date-prefix"> From </span>
-    <span class="start-date"> {{ job.startDate }} </span>
-    <span class="end-date-prefix"> To </span>
-    <span class="end-date"> {{ job.endDate }} </span>
+  <div class="jobs-container">
+    <div class="job" *ngFor="let job of candidate.jobs | slice:0:2">
+      <div class="job-title">
+          <span class="prefix"> Worked as: </span>
+          <span class="title"> {{ job.title }} </span>
+      </div>
+      <div class="period">
+          <span class="start-date-prefix"> from </span>
+          <span class="start-date"> {{ job.startDate }} </span>
+          <span class="end-date-prefix"> to </span>
+          <span class="end-date"> {{ job.endDate }} </span>
+      </div>
+    </div>
+    <a *ngIf="candidate.jobs.length > 2" href=""> See all(#) </a>
   </div>
-  <br>
 </div>
