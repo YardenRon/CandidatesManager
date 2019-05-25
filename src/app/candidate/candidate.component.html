@@ -13,9 +13,14 @@
       </div>
       <div class="period">
           <span class="start-date-prefix"> from </span>
-          <span class="start-date"> {{ job.startDate }} </span>
+          <span class="start-date"> {{ job.startDate.format(DATE_FORMAT) }} </span>
           <span class="end-date-prefix"> to </span>
-          <span class="end-date"> {{ job.endDate }} </span>
+          <span class="end-date"> {{ job.endDate.format(DATE_FORMAT) }} </span>
+      </div>
+      <div class="gap" *ngIf="job.daysSinceLastJob && job.daysSinceLastJob > 0">
+        <span class="prefix"> Gap in CV for </span>
+        <span class="days-number"> {{ job.daysSinceLastJob }} </span>
+        <span class="suffix"> days </span>
       </div>
     </div>
     <a *ngIf="candidate.jobs.length > 2" href=""> See all(#) </a>

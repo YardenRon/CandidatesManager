@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Candidate } from '../shared/models/candidate.model';
+import { Job } from '../shared/models/job.model';
 
 @Component({
   selector: 'app-candidate',
@@ -11,6 +12,7 @@ export class CandidateComponent implements OnInit {
   @Input() candidate: Candidate;
   imagePath: string;
   NUM_OF_IMAGES = 13;
+  DATE_FORMAT = "MMM/DD/YYYY";
 
   ngOnInit() {
     const imageNum = this.pickRandomImageNum(this.NUM_OF_IMAGES);
